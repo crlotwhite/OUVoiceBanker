@@ -227,7 +227,7 @@ namespace OUVoiceBanker
             }
 
             // 출력 폴더 생성 (내부)
-            string contentPath = $"{pathVoiceBank}\\content\\OU_voicebank";
+            string contentPath = Path.Combine(pathVoiceBank, "content", "OU_voicebank", txtVoiceName.Text);
             if (!Directory.Exists(contentPath))
             {
                 Directory.CreateDirectory(contentPath);
